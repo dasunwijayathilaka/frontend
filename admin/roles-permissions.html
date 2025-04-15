@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/roles-permissions.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:53:57 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Admin | Roles & Permissions</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../html/assets/img/favicon.png">
+
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+    <!-- Feather CSS -->
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+
+
+        <!-- Header -->
+        <div class="header"></div>
+        <!-- /Header -->
+
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar"></div>
+        <!-- /Sidebar -->
+
+
+        <div class="page-wrapper page-settings">
+            <div class="content">
+                <div class="content-page-header content-page-headersplit">
+                    <h5>Roles & Permission</h5>
+                    <div class="list-btn">
+                        <ul>
+                            <li>
+                                <a class="btn-filters active" href="roles-permissions.html"><i class="fe fe-list"></i> </a>
+                            </li>
+                            <li>
+                                <a class="btn-filters" href="javascript:void(0);"><i class="fe fe-grid"></i> </a>
+                            </li>
+                            <li>
+                                <a class="btn-filters" href="localization.html"><i class="fe fe-settings"></i> </a>
+                            </li>
+                            <li>
+                                <div class="filter-sorting">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);" class="filter-sets"><img src="assets/img/icons/filter1.svg" class="me-2" alt="img">Filter</a>
+                                        </li>
+                                        <li>
+                                            <span><img src="assets/img/icons/sort.svg" class="me-2" alt="img"></span>
+                                            <div class="review-sort">
+                                                <select class="select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                    <option>Sort by A - Z</option>
+                                                    <option>Sort by Z - A</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="btn btn-primary" href="add-role.html"><i class="fa fa-plus me-2"></i>Add New</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="table-resposnive">
+                            <table class="table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Role</th>
+                                        <th>No of Users</th>
+                                        <th>Created</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Adminstrator</td>
+                                        <td>80</td>
+                                        <td>30 Sep 2022</td>
+                                        <td class="d-flex align-items-center gap-14">
+                                            <div class="active-switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="sliders round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table-actions d-flex gap-10">
+                                                <a href="role-permission.html" class="badge-permission">
+                                                    <i class="fe fe-shield"></i> Permissions
+                                                </a>
+                                                <a class="delete-table me-2" href="edit-user.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Manager</td>
+                                        <td>30</td>
+                                        <td>16 Sep 2022</td>
+                                        <td class="d-flex align-items-center gap-14">
+                                            <div class="active-switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="sliders round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table-actions d-flex gap-10">
+                                                <a href="role-permission.html" class="badge-permission">
+                                                    <i class="fe fe-shield"></i> Permissions
+                                                </a>
+                                                <a class="delete-table me-2" href="edit-user.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Accountant</td>
+                                        <td>50</td>
+                                        <td>23 Sep 2022</td>
+                                        <td class="d-flex align-items-center gap-14">
+                                            <div class="active-switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="sliders round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table-actions d-flex gap-10">
+                                                <a href="role-permission.html" class="badge-permission">
+                                                    <i class="fe fe-shield"></i> Permissions
+                                                </a>
+                                                <a class="delete-table me-2" href="edit-user.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+	
+	<!-- Add Role -->
+	<div class="modal fade" id="add-role" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Add Role</h5>
+					<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
+						<i class="fe fe-x"></i>
+					</button>
+				</div>
+				<form action="https://listee.dreamstechnologies.com/html/admin/roles-permissions.html">
+					<div class="modal-body py-0">
+						<div class="row">
+							<div class="col-12">
+								<div class="form-set">
+									<label>Role Name <span class="mandatory">*</span></label>
+									<input type="text" class="form-control" placeholder="Enter Role Name">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer pt-0">
+						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- /Add Role -->
+	
+	<!-- Edit Role -->
+	<div class="modal fade" id="edit-role" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Edit Role</h5>
+					<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
+						<i class="fe fe-x"></i>
+					</button>
+				</div>
+				<form action="https://listee.dreamstechnologies.com/html/admin/roles-permissions.html">
+					<div class="modal-body py-0">
+						<div class="row">
+							<div class="col-12">
+								<div class="form-set">
+									<label>Role Name <span class="mandatory">*</span></label>
+									<input type="text" class="form-control" placeholder="Enter Role Name" value="Admin">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer pt-0">
+						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- /Edit Role -->
+
+    <!-- Delete -->
+    <div class="modal fade" id="delete-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Delete Roles Permission</h5>
+					<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
+						<i class="fe fe-x"></i>
+					</button>
+				</div>
+                <form action="https://listee.dreamstechnologies.com/html/admin/roles-permissions.html">
+                    <div class="modal-body py-0">
+                        <div class="del-modal">
+                            <p>Are you sure want to Delete?</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer pt-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Yes</button>
+                    </div>
+                </form>
+			</div>
+		</div>
+	</div>
+    <!-- /Delete -->
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+
+    <!-- Select 2 JS-->
+    <script src="assets/js/select2.min.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+
+    <!-- Feather Icon JS -->
+    <script src="assets/js/feather.min.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+
+    <!-- Datatable JS -->
+    <script src="assets/js/jquery.dataTables.min.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+
+
+
+
+
+
+    <!--Common User Checker-->
+    <script src="../admin/assets/js-pages/common-user-checker.js"></script>
+
+    <!--Common Admin Nav-->
+    <script src="assets/js-pages/common-admin-nav.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/admin.js" type="99bf33e775f5a589bbde8272-text/javascript"></script>
+
+<script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="99bf33e775f5a589bbde8272-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9233f8786b1d9c62","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/roles-permissions.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:53:58 GMT -->
+</html>

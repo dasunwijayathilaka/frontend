@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name = "description" content = "This is vikunuwa.lk application">
+    <meta name = "keywords" content = "java, css, javascript">
+    <meta name = "author" content = "Kaveesha Rukshan" >
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikunuwa</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Sweetalert CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--font awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!--sweetalert-->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Rubik FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!--Varela font-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!--font roboto flex-->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        /* Chat Popup Styling */
+        .chat-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #b50505;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chat-header-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .seller-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .seller-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .chat-close {
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            background-color: #f5f5f5;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 10px 12px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            word-wrap: break-word;
+        }
+
+        .message-time {
+            font-size: 12px;
+            margin-top: 3px;
+            color: #6c757d;
+        }
+
+        .received {
+            background-color: white;
+            align-self: flex-start;
+            border-bottom-left-radius: 3px;
+        }
+
+        .sent {
+            background-color: #dcf8c6;
+            align-self: flex-end;
+            border-bottom-right-radius: 3px;
+        }
+
+        .message-image {
+            max-width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: transform 0.2s;
+        }
+
+        .message-image:hover {
+            opacity: 0.9;
+        }
+
+        .chat-footer {
+            padding: 10px 15px;
+            border-top: 1px solid #e0e0e0;
+            background-color: white;
+        }
+
+        .chat-input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin-right: 10px;
+            background-color: #f0f2f5;
+            outline: none;
+        }
+
+        .chat-input.disabled {
+            background-color: #e9ecef;
+            color: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .chat-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .send-btn {
+            background-color: #ef0a0a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .send-btn:hover {
+            background-color: #b30606;
+        }
+
+        .image-attachment-btn {
+            color: #ef0a0a;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: all 0.2s;
+        }
+
+        .image-attachment-btn:hover {
+            color: #b30606;
+            transform: scale(1.1);
+        }
+
+        .image-upload-input {
+            display: none;
+        }
+
+        .image-preview-container {
+            display: none;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .image-preview-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-preview {
+            max-height: 100px;
+            max-width: 100%;
+            border-radius: 5px;
+            border: 2px solid #e9ecef;
+        }
+
+        .remove-image-btn {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ff5252;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .remove-image-btn:hover {
+            background-color: #ff0000;
+            transform: scale(1.1);
+        }
+
+        /* Mode Indicator */
+        .mode-indicator {
+            font-size: 12px;
+            color: #6c757d;
+            text-align: center;
+            padding: 3px 0;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            display: none;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+
+        /* Image Modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1050;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-image {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 5px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-modal:hover {
+            color: #e0e0e0;
+        }
+
+        /* Loading indicator */
+        .loading-indicator {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #35856e;
+        }
+
+        /* Typing indicator */
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            background-color: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            border-bottom-left-radius: 3px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #6c757d;
+            border-radius: 50%;
+            animation: typing 1s infinite;
+            margin: 0 1px;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .chat-popup {
+                width: 90%;
+                height: 80%;
+                bottom: 10%;
+                right: 5%;
+                left: 5%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="main-wrapper innerpagebg">
+
+    <!-- Header -->
+    <div id="navbar-placeholder"></div>
+    <!-- /Header -->
+
+
+    <!--Inner Banner-->
+    <div class="contactbanner innerbanner">
+        <div class="inner-breadcrumb">
+            <div class="container">
+                <div class="row align-items-center text-center">
+                    <div class="col-md-12 col-12 ">
+                        <h2 class="breadcrumb-title">Product</h2>
+                        <nav aria-label="breadcrumb" class="page-breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">item details</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Inner Banner-->
+
+
+
+
+
+
+
+    <div class="container mt-3" style="max-width: 1190px">
+
+
+        <div class="row">
+            <!-- Main Product Content -->
+            <div class="col-md-8">
+                <div class="product-container">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h1 class="product-title">undefined title</h1>
+                            <div class="product-meta"></div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="share-btn">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                            <button class="save-btn">
+                                <i class="far fa-bookmark"></i> Save ad
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Product Images -->
+                    <div class="product-image-container">
+                        <img src="" class="product-image" alt="Product Image">
+                        <button class="fullscreen-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div class="thumbnail-container">
+                        <img src="" class="thumbnail active" alt="Thumbnail 1">
+                        <img src="" class="thumbnail" alt="Thumbnail 2">
+                        <img src="" class="thumbnail" alt="Thumbnail 3">
+                        <img src="" class="thumbnail" alt="Thumbnail 4">
+                        <img src="" class="thumbnail" alt="Thumbnail 5">
+                        <div class="nav-arrows">
+                            <div class="nav-arrow prev-arrow">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="nav-arrow next-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fullscreen Image Viewer -->
+                    <div id="imageViewer" class="image-viewer">
+                        <span class="close-btn">&times;</span>
+                        <button class="prev-btn">&#10094;</button>
+                        <img id="viewerImage" src="" alt="Product Image">
+                        <button class="next-btn">&#10095;</button>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="price">n</div>
+
+                    <div class="category-name mb-3">
+                        category name here
+                    </div>
+
+                    <!-- Description -->
+                    <div class="description">
+                        <h2 class="description-title">Description</h2>
+                        <p>no description available</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <!-- Seller Information -->
+                <div class="seller-card">
+                    <div class="seller-header">
+                        <img src="" class="seller-logo" alt="Smart Choice" style="border-radius: 50%;">
+                        <div>
+                            <div class="seller-name">Unknown Seller</div>
+                            <div>
+                                <span class="badge badge-verified">
+                                    <i class="fas fa-check-circle"></i> VERIFIED SELLER
+                                </span>
+                                <span class="ms-1">
+                                    <i class="fas fa-info-circle text-muted"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-since">no member since</div>
+                </div>
+
+                <!-- Contact Buttons -->
+                <button class="contact-btn">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <div>
+                        <div>no mobile number</div>
+                    </div>
+                </button>
+
+
+
+
+<!--                <button class="contact-btn chat-btn">-->
+<!--                    <i class="fas fa-comment-alt contact-icon"></i>-->
+<!--                    <div>Chat</div>-->
+<!--                </button>-->
+
+                <button class="contact-btn chat-btn">
+                    <i class="fas fa-comment-alt contact-icon"></i>
+                    <div>Chat</div>
+                </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Chat Popup -->
+                <div class="overlay" id="overlay"></div>
+                <div class="chat-popup" id="chatPopup">
+                    <div class="chat-header">
+                        <div class="chat-header-info">
+                            <img src="" alt="Seller Avatar" class="seller-avatar">
+                            <div class="seller-name">Deshani Vidushika</div>
+                        </div>
+                        <div class="chat-close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="chat-body" id="chatBody">
+                        <!-- Messages will be populated here -->
+                        <div class="message received">
+                            <div>Hello! I'm interested in your land for sale in Horana. Is it still available?</div>
+                            <div class="message-time">12:30 PM</div>
+                        </div>
+                        <div class="message sent">
+                            <div>Hi there! Yes, the land is still available. Feel free to ask any questions.</div>
+                            <div class="message-time">12:32 PM</div>
+                        </div>
+                        <div class="typing-indicator" id="typingIndicator">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="mode-indicator" id="modeIndicator">Photo mode: Text input disabled</div>
+                    <div class="image-preview-container" id="imagePreviewContainer">
+                        <div class="image-preview-wrapper">
+                            <img src="" alt="Selected Image" class="image-preview" id="imagePreview">
+                            <button class="remove-image-btn" id="removeImageBtn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-footer">
+                        <div class="chat-input-container">
+                            <input type="text" class="chat-input" id="chatInput" placeholder="Type a message...">
+                            <div class="chat-actions">
+                                <label for="imageUpload" class="image-attachment-btn">
+                                    <i class="fas fa-image"></i>
+                                </label>
+                                <input type="file" id="imageUpload" class="image-upload-input" accept="image/*">
+                                <button class="send-btn" id="sendBtn">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loading-indicator" id="loadingIndicator">
+                        <i class="fas fa-spinner fa-spin fa-2x"></i>
+                    </div>
+                </div>
+
+
+                <!-- Image Modal -->
+                <div class="image-modal" id="imageModal">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                    <img src="" alt="Enlarged Image" class="modal-image" id="enlargedImage">
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Safety Tips -->
+                <div class="safety-card">
+                    <div class="safety-header">
+                        <i class="fas fa-shield-alt safety-icon"></i>
+                        Stay Alert: Avoid Online Scams
+                    </div>
+                    <ul class="safety-tips">
+                        <li>Never share card details or OTPs, and always verify items in person before payment. VIKUNUWA does not offer a delivery service. Stay vigilant!</li>
+                    </ul>
+                    <a href="#" class="safety-link">See all safety tips</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Seller's Other Products -->
+        <div class="seller-products">
+            <h3 class="seller-products-title">More ads from this seller</h3>
+            <div class="row" id="sellerProductsContainer">
+                <!-- Product Cards will be added here dynamically -->
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="stay-tuned">
+                <h3>Stay Tuned With Us</h3>
+                <p>Subcribe to our newletter and never miss our latest news and promotions. Our newsletter is sent once a week, every thursday.</p>
+                <form>
+                    <div class="form-set">
+                        <div class="group-img">
+                            <i class="feather-mail"></i>
+                            <input type="text" class="form-control" placeholder="Enter Email Address">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit"> Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Top -->
+        <div class="footer-top aos" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <!-- Footer Widget -->
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="#"><img src="assets/img/vikunuwa-logo.png" alt="logo" style="width: 250px"></a>
+                            </div>
+                            <div class="footer-content">
+                                <p> Connecting Sri Lanka – Buy, Sell & Discover with Ease! Your Trusted Marketplace for Everything You Need.  </p>
+                            </div>
+                            <div class="social-icon">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /Footer Widget -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <!-- Footer Widget -->
+                        <div class="footer-widget footer-menu">
+                            <h2 class="footer-title">About vikunuwa</h2>
+                            <ul>
+                                <li>
+                                    <a href="about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="terms-condition.html">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Footer Widget -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <!-- Footer Widget -->
+                        <div class="footer-widget footer-menu">
+                            <h2 class="footer-title">Quick links</h2>
+                            <ul>
+                                <li>
+                                    <a href="listing-list-sidebar.html">All Ads</a>
+                                </li>
+                                <li>
+                                    <a href="categories.html">Categories</a>
+                                </li>
+                                <li>
+                                    <a href="dashboard.html">dashboard</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Footer Widget -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <!-- Footer Widget -->
+                        <div class="footer-widget">
+                            <h2 class="footer-title">Communication</h2>
+                            <div class="footer-contact-info">
+                                <div class="footer-address">
+                                    <img src="assets/img/call-calling.svg" alt="Callus">
+                                    <p><span>Call Us</span> <br> +94 76 549 8 907	 </p>
+                                </div>
+                                <div class="footer-address">
+                                    <img src="assets/img/sms-tracking.svg" alt="Callus">
+                                    <p><span>Send Message</span> <br> support@vikunuwa.lk</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Footer Widget -->
+                    </div>
+                </div>
+
+                <!-- Footer Counter Section-->
+                <!--					<div class="footercount">-->
+                <!--						    <div class="row">-->
+                <!--							         <div class="col-lg-3 col-md-3">-->
+                <!--									    <div class="vistors-details">-->
+                <!--										    <p>Our Unique Visitor</p>-->
+                <!--											<p class="visitors-value">25,329,532</p>										-->
+                <!--										</div>									 -->
+                <!--									 </div>-->
+                <!--									  <div class="col-lg-3 col-md-3">-->
+                <!--									      <div class="vistors-details">-->
+                <!--										    <p>Our Unique Visitor</p>-->
+                <!--											<p class="visitors-value">25,329,53264546</p>										-->
+                <!--										</div>									 -->
+                <!--									 </div> -->
+                <!--									 <div class="col-lg-3 col-md-3">-->
+                <!--									     <div class="vistors-details">-->
+                <!--										    <p>Our Unique Visitor</p>-->
+                <!--											<p class="visitors-value">25,329,53264546</p>										-->
+                <!--										</div>									 -->
+                <!--									 </div>-->
+                <!--									  <div class="col-lg-3 col-md-3">-->
+                <!--									    <div class="vistors-details">-->
+                <!--										    <p>We Accept</p>-->
+                <!--											<ul class="d-flex">-->
+                <!--												<li><a href="javascript:void(0)"><img class="img-fluid" src="assets/img/amex-pay.svg" alt="amex"></a></li>-->
+                <!--												<li><a href="javascript:void(0)"><img class="img-fluid" src="assets/img/apple-pay.svg" alt="pay"></a></li>-->
+                <!--												<li><a href="javascript:void(0)"><img class="img-fluid" src="assets/img/gpay.svg" alt="gpay"></a></li>-->
+                <!--												<li><a href="javascript:void(0)"><img class="img-fluid" src="assets/img/master.svg" alt="paycard"></a></li>-->
+                <!--												<li><a href="javascript:void(0)"><img class="img-fluid" src="assets/img/phone.svg" alt="spay"></a></li>-->
+                <!--												<li><a href="javascript:void(0)"><img class="img-fluid" src="assets/img/visa.svg" alt="visa"></a></li>-->
+                <!--											</ul>										   								-->
+                <!--										</div>									 -->
+                <!--									 </div>-->
+                <!--							</div>-->
+                <!--					</div>			-->
+                <!-- /Footer  Counter Section-->
+
+            </div>
+        </div>
+        <!-- /Footer Top -->
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <!-- Copyright -->
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="copyright-text">
+                                <p class="mb-0"> copyright &copy; 2025 developed by <a style="color: #7c7c7c" href="https://kaveesha-rukshan-portfolio.vercel.app" target="_blank">Rukshan</a> | All rights reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Copyright Menu -->
+                            <div class="copyright-menu">
+                                <ul class="policy-menu">
+                                    <li>
+                                        <a href="privacy-policy.html">Privacy </a>
+                                    </li>
+                                    <li>
+                                        <a href="terms-condition.html">Terms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /Copyright Menu -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /Copyright -->
+            </div>
+        </div>
+        <!-- /Footer Bottom -->
+
+    </footer>
+    <!-- /Footer -->
+
+</div>
+
+
+
+<!--jQuery-->
+<script src="../lib/jquery-3.7.1.min.js"></script>
+
+<!--&lt;!&ndash;Common User Checker&ndash;&gt;-->
+<!--<script src="../admin/assets/js-pages/common-user-checker.js"></script>-->
+
+
+<!--Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--sweet alert-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+
+
+
+
+<!-- Common Nav JS -->
+<script src="assets/js-pages/common-nav.js"></script>
+
+<!--Product JS-->
+<script src="assets/js-pages/product/product.js"></script>
+
+<!--Chat JS-->
+<script src="assets/js-pages/product/chat.js"></script>
+
+
+
+
+</body>
+</html>

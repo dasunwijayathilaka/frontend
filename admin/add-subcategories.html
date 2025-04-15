@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/add-subcategories.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:52 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Admin | add subcategories</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../html/assets/img/favicon.png">
+
+    <!-- Sweetalert CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+    <!-- Feather CSS -->
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+    <!-- Ck Editor -->
+	<link rel="stylesheet" href="assets/css/ckeditor.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <!-- Header -->
+        <div class="header"></div>
+        <!-- /Header -->
+
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar"></div>
+        <!-- /Sidebar -->
+        
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-7 col-sm-12 m-auto">
+                        <div class="content-page-header">
+                            <h5>Add Sub Category</h5>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-set">
+                                        <label>Parent Category</label>
+                                        <select id="parent-category" class="select">
+                                            <option value="0">Select</option>
+                                            <!-- Categories will be loaded dynamically -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-set">
+                                        <label>Sub category name</label>
+                                        <input type="text" id="subcategory-name" class="form-control" placeholder="Enter Sub Category Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="btn-path">
+                                        <a href="sub-categories.html" class="btn btn-cancel me-3">Cancel</a>
+                                        <button type="button" id="save-subcategory" class="btn btn-submit"> Save Sub Category</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+
+    <!-- Select 2 JS-->
+    <script src="assets/js/select2.min.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+    <!-- Feather Icon JS -->
+    <script src="assets/js/feather.min.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+    <!-- Datatable JS -->
+    <script src="assets/js/jquery.dataTables.min.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+    <!-- Ck Editor JS -->
+	<script src="assets/js/ckeditor.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+    <!--sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+
+
+
+    <!--Common admin nav and sidebar  -->
+    <script src="assets/js-pages/common-admin-nav.js"></script>
+
+    <!--Common User Checker-->
+    <script src="../admin/assets/js-pages/common-user-checker.js"></script>
+
+    <!--add sub categories-->
+    <script src="assets/js-pages/add-subcategories/add-subcategories.js"></script>
+
+
+    <!-- Custom JS -->
+    <script src="assets/js/admin.js" type="3f862257143d83cb3aa156a0-text/javascript"></script>
+
+<script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="3f862257143d83cb3aa156a0-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9233fa88dc309c62","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/add-subcategories.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:52 GMT -->
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/membership.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:53:53 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Listee | Template</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+    <!-- Feather CSS -->
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+    
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left"> 
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.svg" alt="Logo" width="30" height="30">
+                </a>
+                <a href="index.html" class=" logo-small">
+                    <img src="assets/img/logo-small.svg" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+            <a class="mobile_btn" id="mobile_btn" href="javascript:void(0);">
+                <i class="fas fa-align-left"></i>
+            </a>
+            <div class="header-split">
+                <div class="page-headers">
+                    <div class="search-bar">
+						<span><i class="fe fe-search"></i></span>
+						<input type="text" placeholder="Search" class="form-control">
+					</div>
+                </div>
+                <ul class="nav user-menu">
+                    <!-- Notifications -->
+                    <li class="nav-item">
+                        <a href="../index.html" class="viewsite" ><i class="fe fe-globe me-2"></i>View Site</a>
+                    </li>
+                    <li class="nav-item dropdown has-arrow dropdown-heads flag-nav">
+                        <a class="nav-link" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+                            <img src="assets/img/flags/us1.png" alt="" height="20"> 
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/us.png" class="me-2" alt="" height="16"> English
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/fr.png" class="me-2" alt="" height="16"> French
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/es.png" class="me-2" alt="" height="16"> Spanish
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/de.png" class="me-2" alt="" height="16"> German
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item  has-arrow dropdown-heads ">
+                        <a href="javascript:void(0);" class="toggle-switch">
+                            <i class="fe fe-moon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown has-arrow dropdown-heads ">
+                        <a href="javascript:void(0);" data-bs-toggle="dropdown">
+                            <i class="fe fe-bell"></i>
+                        </a>
+                        <div class="dropdown-menu notifications">
+                            <div class="topnav-dropdown-header">
+                                <span class="notification-title">Notifications</span>
+                                <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                            </div>
+                            <div class="noti-content">
+                                <ul class="notification-list">
+                                    <li class="notification-message">
+                                        <a href="notifications.html">
+                                            <div class="media d-flex">
+                                                <span class="avatar avatar-sm flex-shrink-0">
+                                                    <img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-01.jpg">
+                                                </span>
+                                                <div class="media-body flex-grow-1">
+                                                    <p class="noti-details">
+                                                        <span class="noti-title">Matthew Garcia have been subscribed</span>
+                                                    </p>
+                                                    <p class="noti-time">
+                                                        <span class="notification-time">15 Sep 2020 10:20 PM</span>
+                                                    </p>
+                                                    <button type="submit" class="btn btn-accept">Accept</button><span><button type="submit" class="btn btn-decline">Decline</button></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notification-message">
+                                        <a href="notifications.html">
+                                            <div class="media d-flex">
+                                                <span class="avatar avatar-sm flex-shrink-0">
+                                                    <img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-02.jpg">
+                                                </span>
+                                                <div class="media-body flex-grow-1">
+                                                    <p class="noti-details">
+                                                        <span class="noti-title">New User Registered “James Hardin”</span>
+                                                    </p>
+                                                    <p class="noti-time">
+                                                        <span class="notification-time">15 Sep 2020 10:20 PM</span>
+                                                    </p>
+                                                    <button type="submit" class="btn btn-accept">Accept</button><span><button type="submit" class="btn btn-decline">Decline</button></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notification-message">
+                                        <a href="notifications.html">
+                                            <div class="media d-flex">
+                                                <span class="avatar avatar-sm flex-shrink-0">
+                                                    <img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-03.jpg">
+                                                </span>
+                                                <div class="media-body flex-grow-1">
+                                                    <p class="noti-details">
+                                                        <span class="noti-title">New Service added  “Plumbing”</span>
+                                                    </p>
+                                                    <p class="noti-time">
+                                                        <span class="notification-time">15 Sep 2020 10:20 PM</span>
+                                                    </p>
+                                                    <button type="submit" class="btn btn-decline">Accept</button>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="topnav-dropdown-footer">
+                                <a href="notifications.html">View all Notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item  has-arrow dropdown-heads ">
+                        <a href="javascript:void(0);" class="win-maximize">
+                            <i class="fe fe-maximize" ></i>
+                        </a>
+                    </li>
+                    
+                    <!-- User Menu -->
+                    <li class="nav-item dropdown">
+                        <a href="javascript:void(0)" class="user-link  nav-link" data-bs-toggle="dropdown">
+                            <span class="user-img">
+                                <img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
+                                <span class="animate-circle"></span>
+                            </span>
+                            <span class="user-content">
+                                <span class="user-name">John Smith</span>
+                                <span class="user-details">Demo User</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu menu-drop-user">
+                            <div class="profilemenu ">
+                                <div class="user-detials">
+                                    <a href="account.html">
+                                        <span class="profile-image">
+                                            <img src="assets/img/user.jpg" alt="img" class="profilesidebar">
+                                        </span>
+                                        <span class="profile-content">
+                                            <span>John Smith</span>
+                                            <span><span class="__cf_email__" data-cfemail="307a5f585e70575d51595c1e535f5d">[email&#160;protected]</span></span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="subscription-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="account-settings.html" >Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="localization.html">Settings</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subscription-logout">
+                                    <a href="signin.html">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /User Menu -->
+                </ul>
+            </div>
+            
+        </div>
+        <!-- /Header -->
+        
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <a href="index.html">
+                        <img src="assets/img/logo.svg" class="img-fluid logo" alt="">
+                    </a>
+                    <a href="index.html">
+                        <img src="assets/img/logo-small.svg" class="img-fluid logo-small" alt="">
+                    </a>
+                </div>
+                <div class="siderbar-toggle">
+                    <label class="switch" id="toggle_btn">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title m-0">
+                            <h6>Home</h6>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fe fe-grid"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Listing</h6>
+                        </li>
+                        <li>
+                            <a href="listings.html"><i class="fe fe-briefcase"></i> 
+                                <span>Listings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categories.html"><i class="fe fe-file-text"></i> 
+                                <span>Categories</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sub-categories.html"><i class="fe fe-clipboard"></i> <span>Sub Categories</span></a>
+                        </li>
+                        <li>
+                            <a href="locations.html"><i class='fe fe-map'></i><span>Locations</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-star"></i> 
+                                <span>Review</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="review-type.html">Review Type</a>
+                                </li>
+                                <li>
+                                    <a href="review.html">Review</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="comments.html"><i class='fe fe-message-square'></i><span>Comments</span></a>
+                        </li>
+                        <li>
+                            <a href="amenities.html"><i class='fe fe-briefcase'></i><span>Amenities</span></a>
+                        </li>
+                        <li>
+                            <a href="product-enquiry.html"><i class='fe fe-box'></i><span>Product Enquiry</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Finance & Accounts</h6>
+                        </li>
+                        <li>
+                            <a href="transactions.html"><i class="fe fe-bar-chart"></i> <span>Transactions</span></a>
+                        </li>
+                        <li>
+                            <a href="payment-gateway.html"><i class="fe fe-file-text"></i> 
+                                <span>Payment Gateway</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tax-rates.html"><i class="fe fe-file-text"></i> 
+                                <span>Tax Rates</span>
+                            </a>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-credit-card"></i> 
+                                <span>Payouts</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="payout-request.html">Payout Requests</a>
+                                </li>
+                                <li>
+                                    <a href="payout-settings.html">Payout Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Others</h6>
+                        </li>
+                        <li>
+                            <a href="chat.html"><i class="fe fe-message-square"></i> <span>Chat</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Content</h6>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-file"></i> 
+                                <span>Pages</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="add-page.html">Add Page</a>
+                                </li>
+                                <li>
+                                    <a href="pages-list.html">Pages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-file-text"></i> 
+                                <span>Blog</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="all-blog.html">All Blog</a>
+                                </li>
+                                <li>
+                                    <a href="add-blog.html">Add Blog</a>
+                                </li>
+                                <li>
+                                    <a href="blogs-categories.html">Categories</a>
+                                </li>
+                                <li>
+                                    <a href="blogs-comments.html">Blog Comments</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-map-pin"></i> 
+                                <span>Location</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="countries.html">Countries</a>
+                                </li>
+                                <li>
+                                    <a href="states.html">States</a>
+                                </li>
+                                <li>
+                                    <a href="cities.html">Cities</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="testimonials.html"><i class="fe fe-star"></i> <span>Testimonials</span></a>
+                        </li>
+                        <li>
+                            <a href="faq.html"><i class="fe fe-help-circle"></i> <span>FAQ</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Membership</h6>
+                        </li>
+                        <li>
+                            <a href="membership.html" class="active"><i class="fe fe-user"></i> <span>Membership</span></a>
+                        </li>
+                        <li>
+                            <a href="membership-transactions.html"><i class="fe fe-user-plus"></i> <span>Transactions</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Reports</h6>
+                        </li>
+                        <li>
+                            <a href="admin-earnings.html"><i class="fe fe-user"></i> 
+                                <span>Admin Earnings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="provider-earnings.html"><i class="fe fe-dollar-sign"></i> 
+                                <span>Provider Earnings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="membership-transactions.html"><i class="fe fe-tv"></i> 
+                                <span>Membership Transaction</span>
+                            </a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>User Management</h6>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-user"></i> 
+                                <span> Users</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="user-list.html">New User</a>
+                                </li>
+                                <li>
+                                    <a href="user-customers.html">Customers</a>
+                                </li>
+                                <li>
+                                    <a href="user-providers.html">Providers </a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="roles-permissions.html"><i class="fe fe-file-text"></i> <span>Roles & Permissions</span></a>
+                        </li>
+                        <li>
+                            <a href="delete-account-requests.html"><i class="fe fe-trash-2"></i> <span>Delete Account Requests</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Management</h6>
+                        </li>
+                        <li>
+                            <a href="cachesystem.html"><i class="fe fe-user"></i> 
+                                <span>Cache System</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="email-templates.html"><i class="fe fe-mail"></i> <span>Email Templates</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Support</h6>
+                        </li>
+                        <li>
+                            <a href="contact-messages.html"><i class="fe fe-message-square"></i> <span>Contact Messages</span></a>
+                        </li>
+                        <li>
+                            <a href="abuse-reports.html"><i class="fe fe-file-text"></i> <span>Abuse Reports</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Settings</h6>
+                        </li>
+                        <li>
+                            <a href="localization.html" ><i class="fe fe-settings"></i> <span>Settings</span></a>
+                        </li>
+                        <li>
+                            <a href="signin.html"><i class="fe fe-log-out"></i> <span>Logout</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Sidebar -->
+        
+        <div class="page-wrapper page-settings">
+            <div class="content">
+                <div class="content-page-header content-page-headersplit mb-0">
+                    <h5>Membership</h5>
+                    <div class="list-btn">
+                        <ul>
+                            <li>
+                                <a class="btn-filters active" href="review-type.html"><i class="fe fe-list"></i> </a>
+                            </li>
+                            <li>
+                                <a class="btn-filters" href="javascript:void(0);"><i class="fe fe-grid"></i> </a>
+                            </li>
+                            <li>
+                                <a class="btn-filters" href="localization.html"><i class="fe fe-settings"></i> </a>
+                            </li>
+                            <li>
+                                <div class="filter-sorting">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);" class="filter-sets"><img src="assets/img/icons/filter1.svg" class="me-2" alt="img">Filter</a>
+                                        </li>
+                                        <li>
+                                            <span><img src="assets/img/icons/sort.svg" class="me-2" alt="img"></span>
+                                            <div class="review-sort">
+                                                <select class="select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                    <option>Sort by A - Z</option>
+                                                    <option>Sort by A - Z</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="btn btn-primary" href="add-membership.html"><i class="fa fa-plus me-2"></i>Add New</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="table-resposnive table-div">
+                            <table class="table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Type</th>
+                                        <th>Yearly/Monthly</th>
+                                        <th>Status </th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Free</td>
+                                        <td>$0</td>
+                                        <td>Free</td>
+                                        <td>Yearly</td>
+                                        <td>
+                                            <div class="active-switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked="">
+                                                    <span class="sliders round"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-actions d-flex">
+                                                <a class="delete-table me-2" href="edit-membership.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Standard</td>
+                                        <td>$10</td>
+                                        <td>Paid</td>
+                                        <td>Monthly</td>
+                                        <td>
+                                            <div class="active-switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="sliders round"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-actions d-flex">
+                                                <a class="delete-table me-2" href="edit-membership.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Standard</td>
+                                        <td>$50</td>
+                                        <td>Paid</td>
+                                        <td>Monthly</td>
+                                        <td>
+                                            <div class="active-switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked="">
+                                                    <span class="sliders round"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-actions d-flex">
+                                                <a class="delete-table me-2" href="edit-membership.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Premium</td>
+                                        <td>$450</td>
+                                        <td>Paid</td>
+                                        <td>Monthly</td>
+                                        <td>
+                                            <div class="active-switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="sliders round"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-actions d-flex">
+                                                <a class="delete-table me-2" href="edit-membership.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!--change email-modal -->
+    <div class="modal fade" id="add-faq" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create FAQ’s</h5>
+                    <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fe fe-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body py-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-set">
+                                <label>Title</label>
+                                <input type="text" class="form-control" placeholder="Enter FAQ Title">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-set">
+                                <label>Category</label>
+                                <select class="select">
+                                    <option>Select Category</option>
+                                    <option> Category 1</option>
+                                    <option> Category 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-set">
+                                <label>Current Password</label>
+                                <textarea class="form-control" placeholder="Enter Your Details"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-groupheads d-flex d-flex justify-content-between">
+                                <h2>Status</h2>
+                                <div class="active-switch">
+                                    <label class="switch">
+                                        <input type="checkbox" checked="">
+                                        <span class="sliders round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pt-0">
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.7.1.min.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+    
+    <!-- Select 2 JS-->
+    <script src="assets/js/select2.min.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+
+    <!-- Feather Icon JS -->
+    <script src="assets/js/feather.min.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+
+    <!-- Datatable JS -->
+    <script src="assets/js/jquery.dataTables.min.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+
+
+
+    <!-- Custom JS -->
+    <script src="assets/js/admin.js" type="31c1e349c7215173ab2a780e-text/javascript"></script>
+
+<script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="31c1e349c7215173ab2a780e-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9233f863cde03e44","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/membership.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:53:54 GMT -->
+</html>

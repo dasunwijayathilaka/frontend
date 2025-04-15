@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/rejected-listings.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:32 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Admin | Rejected listing</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../html/assets/img/favicon.png">
+
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+    <!-- Feather CSS -->
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <!-- Header -->
+        <div class="header"></div>
+        <!-- /Header -->
+
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar"></div>
+        <!-- /Sidebar -->
+
+
+        <div class="page-wrapper page-settings">
+            <div class="content">
+                <div class="content-page-header content-page-headersplit">
+                    <h5>All Listings</h5>
+                    <div class="list-btn">
+                        <ul>
+                            <li>
+                                <a class="btn-filters active" href="inactive-listings.html"><i class="fe fe-list"></i> </a>
+                            </li>
+                            <li>
+                                <a class="btn-filters" href="account-settings.html"><i class="fe fe-settings"></i> </a>
+                            </li>
+                            <li>
+                                <div class="filter-sorting">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);" class="filter-sets"><img src="assets/img/icons/filter1.svg" class="me-2" alt="img">Filter</a>
+                                        </li>
+                                        <li>
+                                            <span><img src="assets/img/icons/sort.svg" class="me-2" alt="img"></span>
+                                            <div class="review-sort">
+                                                <select class="select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                    <option>Sort by A - Z</option>
+                                                    <option>Sort by A - Z</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tab-sets">
+                            <div class="tab-contents-sets">
+                                <ul>
+                                    <li>
+                                        <a href="listings.html" >All Listings</a>
+                                    </li>
+                                    <li>
+                                        <a href="pending-listings.html">Pending Listings</a>
+                                    </li>
+                                    <li>
+                                        <a href="approved-listings.html">Approved Listings</a>
+                                    </li>
+                                    <li>
+                                        <a href="rejected-listings.html" class="active">Rejected Listings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents-count">
+                                <h6>Showing 8-10 of 84 results</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="table-resposnive table-div">
+                            <table class="table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Listing</th>
+                                        <th>Category</th>
+                                        <th>Sub Category</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Created By</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>
+                                            <div class="table-imgname">
+                                                <img src="assets/img/services/service-02.jpg" class="me-2" alt="img">
+                                                <span>Car Repair Services</span>
+                                            </div>
+                                        </td>
+                                        <td>Automobile</td>
+                                        <td>Other</td>
+                                        <td>$50</td>
+                                        <td>17 Sep 2022</td>
+                                        <td><h6 class="badge-delete">Rejected</h6></td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="table-profileimage">
+                                                <img src="assets/img/customer/user-02.jpg" class="me-2" alt="img">
+                                                <span>Admin</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="table-actions d-flex">
+                                                <a class="delete-table me-2" href="edit-listing.html" >
+                                                   <img src="assets/img/icons/edit.svg" alt="svg">
+                                                </a>
+                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                                    <img src="assets/img/icons/delete.svg" alt="svg">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- Delete -->
+    <div class="modal fade" id="delete-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Delete Inactive Services</h5>
+					<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
+						<i class="fe fe-x"></i>
+					</button>
+				</div>
+                <form action="https://listee.dreamstechnologies.com/html/admin/inactive-listings.html">
+                    <div class="modal-body py-0">
+                        <div class="del-modal">
+                            <p>Are you sure want to Delete?</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer pt-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Yes</button>
+                    </div>
+                </form>
+			</div>
+		</div>
+	</div>
+    <!-- /Delete -->
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+
+    <!-- Select 2 JS-->
+    <script src="assets/js/select2.min.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+
+    <!-- Feather Icon JS -->
+    <script src="assets/js/feather.min.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+
+    <!-- Datatable JS -->
+    <script src="assets/js/jquery.dataTables.min.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+
+
+
+    <!--Common User Checker-->
+    <script src="../admin/assets/js-pages/common-user-checker.js"></script>
+
+    <!--Common Admin Nav-->
+    <script src="assets/js-pages/common-admin-nav.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/admin.js" type="bebd8582acd6c63ac3ab552c-text/javascript"></script>
+
+<script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="bebd8582acd6c63ac3ab552c-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9233fa5a8f449c62","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/rejected-listings.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:32 GMT -->
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/security.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:05 GMT -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Admin | Account security</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../html/assets/img/favicon.png">
+
+
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+	
+	<!-- Mobile CSS-->
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css">
+
+	<!-- Feather CSS -->
+	<link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+	<div class="main-wrapper">
+
+        <!-- Header -->
+        <div class="header"></div>
+        <!-- /Header -->
+
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar"></div>
+        <!-- /Sidebar -->
+
+
+        <div class="page-wrapper page-settings">
+			<div class="content-sidelink">
+				<div class="content-sidelinkheading">
+					<h6>Settings</h6>
+				</div>
+                <div class="content-sidelinkmenu">
+                    <ul>
+                        <li><a class="active" href="account-settings.html">Account Settings </a></li>
+                        <li><a class="active" href="security.html">Security</a></li>
+                    </ul>
+                </div>
+			</div>
+			<div class="content w-100">
+                <div class="content-page-header">
+                    <h5>Security</h5>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                       <div class="connectetapps">
+                            <div class="connectetappsimg">
+                                <div class="connectet-img">
+                                    <img src="assets/img/icons/lock.svg" alt="img">
+                                </div>
+                                <div class="connectet-content">
+                                    <h3>Password</h3>
+                                    <p>Last Changed <span> 22 Sep 2022, 10:30:55 AM</span></p>
+                                </div>
+                            </div>
+                            <div class="connectetappscontent">
+                                <a href="change-password.html" class="btn btn-linedark">Change Password</a>
+                            </div>
+                       </div>
+
+                        <div class="connectetapps">
+                            <div class="connectetappsimg">
+                                <div class="connectet-img">
+                                    <img src="assets/img/icons/mobile.svg" alt="img">
+                                </div>
+                                <div class="connectet-content">
+                                    <h3>Phone Number Verification </h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur </p>
+                                </div>
+                            </div>
+                            <div class="connectetappscontent">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="btn btn-change" data-bs-toggle="modal" data-bs-target="#change-no">Change</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="btn btn-removes">Remove</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="connectetapps">
+                            <div class="connectetappsimg">
+                                <div class="connectet-img">
+                                    <img src="assets/img/icons/email.svg" alt="img">
+                                </div>
+                                <div class="connectet-content">
+                                    <h3>Email Verification</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur </p>
+                                </div>
+                            </div>
+                            <div class="connectetappscontent">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="btn btn-change" data-bs-toggle="modal" data-bs-target="#change-email">Change</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="btn btn-removes">Remove</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="btn-path">
+                            <a href="javascript:void(0);" class="btn btn-cancel me-3">Cancel</a>
+                            <a href="javascript:void(0);" class="btn btn-submit">Submit</a>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div> 
+	</div>
+
+	<!--change email-modal -->
+	<div class="modal fade" id="change-email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Change Email</h5>
+					<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
+						<i class="fe fe-x"></i>
+					</button>
+				</div>
+				<div class="modal-body py-0">
+					<div class="row">
+						<div class="col-12">
+							<div class="form-set">
+								<label>Current Email Address</label>
+								<input type="text" class="form-control" placeholder="Enter Email Address">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-set">
+								<label>New Email Address<span class="mandatory">*</span></label>
+								<input type="text" class="form-control" placeholder="Enter Email Address">
+								<p><i class="fa fa-info-circle me-2 ms-1"></i>New Email Address Only Updated Once You Verified </p>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-set">
+								<label>Current Password</label>
+								<div class="pass-group">
+									<input type="password" class="form-control pass-input" placeholder="*************">
+									<span class="fas toggle-password fa-eye-slash"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer pt-0">
+					<button type="button" class="btn btn-primary">Change Email</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--change email-no -->
+	<div class="modal fade" id="change-no" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Change Phone Number</h5>
+					<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
+						<i class="fe fe-x"></i>
+					</button>
+				</div>
+				<div class="modal-body py-0">
+					<div class="row">
+						<div class="col-md-12">
+							<label class="col-form-label">Phone Number</label>										
+						</div>
+						<div class="col-md-2 pe-0">
+							<div class="form-set">
+								<input class="form-control form-control-lg group_formcontrol" id="phone" name="phone" type="text" >
+							</div>
+						</div>
+						<div class="col-md-10 ps-0">
+							<div class="form-set">
+								<input type="text" class="form-control" placeholder="(256) 789-6253">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<label class="col-form-label">New Phone Number</label>										
+						</div>
+						<div class="col-md-2 pe-0">
+							<div class="form-set mb-0">
+								<input class="form-control form-control-lg group_formcontrol" id="phone1" name="phone" type="text" >
+							</div>
+						</div>
+						<div class="col-md-10 ps-0">
+							<div class="form-set mb-0">
+								<input type="text" class="form-control" placeholder="(256) 789-6253">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-set">
+								<p><i class="fa fa-info-circle me-2 ms-1"></i>New Phone Number Only Updated Once You Verified </p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="form-set">
+								<label>Current Password</label>
+								<div class="pass-group">
+									<input type="password" class="form-control pass-inputs" placeholder="*************">
+									<span class="fas toggle-passwords fa-eye-slash"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer pt-0">
+					<button type="button" class="btn btn-primary">Change Number</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- jQuery -->
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+
+    <!-- Select 2 JS-->
+    <script src="assets/js/select2.min.js" type="e1e29d49f59f7b57589f2f50-text/javascript"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js" type="e1e29d49f59f7b57589f2f50-text/javascript"></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js" type="e1e29d49f59f7b57589f2f50-text/javascript"></script>
+
+	<!-- Feather Icon JS -->
+	<script src="assets/js/feather.min.js" type="e1e29d49f59f7b57589f2f50-text/javascript"></script>
+
+	<!-- Mobile Input -->
+	<script src="assets/plugins/intltelinput/js/intlTelInput.js" type="e1e29d49f59f7b57589f2f50-text/javascript"></script>	
+
+	<!-- Slimscroll JS -->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js" type="e1e29d49f59f7b57589f2f50-text/javascript"></script>
+
+
+
+
+
+
+
+
+    <!--Common User Checker-->
+    <script src="../admin/assets/js-pages/common-user-checker.js"></script>
+
+    <!--Common admin nav and sidebar-->
+    <script src="assets/js-pages/common-admin-nav.js"></script>
+
+
+    <!-- Custom JS -->
+    <script src="assets/js/admin.js" type="e1e29d49f59f7b57589f2f50-text/javascript"></script>
+
+<script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="e1e29d49f59f7b57589f2f50-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9233fa0b38bb3e44","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/security.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:12 GMT -->
+</html>

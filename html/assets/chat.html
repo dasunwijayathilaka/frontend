@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Feature with Photo-Only Sending</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Chat Button Styling */
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #f8f9fa;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #35856e;
+      font-weight: 500;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .contact-btn:hover {
+      background-color: #e9ecef;
+    }
+
+    /* Chat Popup Styling */
+    .chat-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      background-color: #35856e;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .chat-header-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .seller-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .seller-name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .chat-close {
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: 15px;
+      background-color: #f5f5f5;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin-bottom: 5px;
+      word-wrap: break-word;
+    }
+
+    .message-time {
+      font-size: 12px;
+      margin-top: 3px;
+      color: #6c757d;
+    }
+
+    .received {
+      background-color: white;
+      align-self: flex-start;
+      border-bottom-left-radius: 3px;
+    }
+
+    .sent {
+      background-color: #dcf8c6;
+      align-self: flex-end;
+      border-bottom-right-radius: 3px;
+    }
+
+    .message-image {
+      max-width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 5px;
+      transition: transform 0.2s;
+    }
+
+    .message-image:hover {
+      opacity: 0.9;
+    }
+
+    .chat-footer {
+      padding: 10px 15px;
+      border-top: 1px solid #e0e0e0;
+      background-color: white;
+    }
+
+    .chat-input-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .chat-input {
+      flex: 1;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 15px;
+      margin-right: 10px;
+      background-color: #f0f2f5;
+      outline: none;
+    }
+
+    .chat-input.disabled {
+      background-color: #e9ecef;
+      color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    .chat-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .send-btn {
+      background-color: #35856e;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .send-btn:hover {
+      background-color: #2a6956;
+    }
+
+    .image-attachment-btn {
+      color: #35856e;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      margin-right: 10px;
+      transition: all 0.2s;
+    }
+
+    .image-attachment-btn:hover {
+      color: #2a6956;
+      transform: scale(1.1);
+    }
+
+    .image-upload-input {
+      display: none;
+    }
+
+    .image-preview-container {
+      display: none;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .image-preview-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-preview {
+      max-height: 100px;
+      max-width: 100%;
+      border-radius: 5px;
+      border: 2px solid #e9ecef;
+    }
+
+    .remove-image-btn {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background-color: #ff5252;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .remove-image-btn:hover {
+      background-color: #ff0000;
+      transform: scale(1.1);
+    }
+
+    /* Mode Indicator */
+    .mode-indicator {
+      font-size: 12px;
+      color: #6c757d;
+      text-align: center;
+      padding: 3px 0;
+      background-color: #f8f9fa;
+      border-top: 1px solid #e0e0e0;
+      display: none;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 999;
+    }
+
+    /* Image Modal */
+    .image-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1050;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-image {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 5px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .close-modal:hover {
+      color: #e0e0e0;
+    }
+
+    /* Loading indicator */
+    .loading-indicator {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #35856e;
+    }
+
+    /* Typing indicator */
+    .typing-indicator {
+      display: none;
+      align-self: flex-start;
+      background-color: white;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border-bottom-left-radius: 3px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #6c757d;
+    }
+
+    .typing-indicator span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: #6c757d;
+      border-radius: 50%;
+      animation: typing 1s infinite;
+      margin: 0 1px;
+    }
+
+    .typing-indicator span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-indicator span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typing {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .chat-popup {
+        width: 90%;
+        height: 80%;
+        bottom: 10%;
+        right: 5%;
+        left: 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Your existing content -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <button class="contact-btn">
+        <i class="fas fa-comment-alt"></i>
+        <div>Chat</div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Chat Popup -->
+<div class="overlay" id="overlay"></div>
+<div class="chat-popup" id="chatPopup">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <img src="/api/placeholder/40/40" alt="Seller Avatar" class="seller-avatar">
+      <div class="seller-name">Unknown</div>
+    </div>
+    <div class="chat-close">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <!-- Messages will be populated here -->
+    <div class="message received">
+      <div>Hello! I'm interested in your land for sale in Horana. Is it still available?</div>
+      <div class="message-time">12:30 PM</div>
+    </div>
+    <div class="message sent">
+      <div>Hi there! Yes, the land is still available. Feel free to ask any questions.</div>
+      <div class="message-time">12:32 PM</div>
+    </div>
+    <div class="typing-indicator" id="typingIndicator">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="mode-indicator" id="modeIndicator">Photo mode: Text input disabled</div>
+  <div class="image-preview-container" id="imagePreviewContainer">
+    <div class="image-preview-wrapper">
+      <img src="" alt="Selected Image" class="image-preview" id="imagePreview">
+      <button class="remove-image-btn" id="removeImageBtn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <div class="chat-input-container">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Type a message...">
+      <div class="chat-actions">
+        <label for="imageUpload" class="image-attachment-btn">
+          <i class="fas fa-image"></i>
+        </label>
+        <input type="file" id="imageUpload" class="image-upload-input" accept="image/*">
+        <button class="send-btn" id="sendBtn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="loading-indicator" id="loadingIndicator">
+    <i class="fas fa-spinner fa-spin fa-2x"></i>
+  </div>
+</div>
+
+<!-- Image Modal -->
+<div class="image-modal" id="imageModal">
+  <span class="close-modal" id="closeModal">&times;</span>
+  <img src="" alt="Enlarged Image" class="modal-image" id="enlargedImage">
+</div>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Variables
+    let selectedImage = null;
+
+    // Open/Close Chat Functions
+    $('.contact-btn').on('click', function() {
+      $('#chatPopup').fadeIn(300).css('display', 'flex');
+      $('#overlay').fadeIn(300);
+      $('#chatInput').focus();
+      scrollToBottom();
+    });
+
+    $('.chat-close, #overlay').on('click', function() {
+      $('#chatPopup').fadeOut(300);
+      $('#overlay').fadeOut(300);
+    });
+
+    // Send Message
+    function sendMessage() {
+      const messageText = $('#chatInput').val().trim();
+
+      // If there's no image and no text, don't do anything
+      if (messageText === '' && !selectedImage) return;
+
+      const currentTime = new Date();
+      const timeString = currentTime.getHours() + ':' +
+              (currentTime.getMinutes() < 10 ? '0' : '') +
+              currentTime.getMinutes();
+
+      // Create message element
+      const $messageElement = $('<div>').addClass('message sent');
+
+      // Add text if any (only when no image is selected)
+      if (messageText && !selectedImage) {
+        $messageElement.append($('<div>').text(messageText));
+      }
+
+      // Add image if selected
+      if (selectedImage) {
+        const $image = $('<img>')
+                .addClass('message-image')
+                .attr('src', selectedImage)
+                .attr('alt', 'Sent Image');
+        $messageElement.append($image);
+      }
+
+      // Add timestamp
+      $messageElement.append($('<div>').addClass('message-time').text(timeString));
+
+      // Add to chat
+      $('#chatBody').append($messageElement);
+
+      // Clear inputs
+      $('#chatInput').val('');
+      if (selectedImage) {
+        removeSelectedImage();
+      }
+
+      scrollToBottom();
+
+      // Simulate typing indicator
+      showTypingIndicator();
+
+      // Simulate response after delay
+      setTimeout(function() {
+        hideTypingIndicator();
+        simulateResponse();
+      }, 2000);
+    }
+
+    // Handle Send Button Click and Enter Key
+    $('#sendBtn').on('click', sendMessage);
+    $('#chatInput').on('keypress', function(e) {
+      if (e.which === 13 && !$(this).hasClass('disabled')) {
+        sendMessage();
+      }
+    });
+
+    // Image Upload Handling
+    $('#imageUpload').on('change', function(e) {
+      const file = e.target.files[0];
+      if (file && file.type.match('image.*')) {
+        const reader = new FileReader();
+
+        // Show loading indicator
+        $('#loadingIndicator').fadeIn(200);
+
+        reader.onload = function(e) {
+          selectedImage = e.target.result;
+          $('#imagePreview').attr('src', selectedImage);
+          $('#imagePreviewContainer').slideDown(300);
+          $('#loadingIndicator').fadeOut(200);
+
+          // Disable text input when image is selected
+          $('#chatInput')
+                  .val('')
+                  .attr('placeholder', 'Photo mode: Send photo only')
+                  .addClass('disabled')
+                  .prop('disabled', true);
+
+          // Show mode indicator
+          $('#modeIndicator').slideDown(300);
+        };
+
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Remove Selected Image
+    $('#removeImageBtn').on('click', removeSelectedImage);
+
+    function removeSelectedImage() {
+      selectedImage = null;
+      $('#imagePreview').attr('src', '');
+      $('#imagePreviewContainer').slideUp(300);
+      $('#imageUpload').val('');
+
+      // Re-enable text input
+      $('#chatInput')
+              .attr('placeholder', 'Type a message...')
+              .removeClass('disabled')
+              .prop('disabled', false);
+
+      // Hide mode indicator
+      $('#modeIndicator').slideUp(300);
+    }
+
+    // Image Modal
+    $(document).on('click', '.message-image', function() {
+      const imgSrc = $(this).attr('src');
+      $('#enlargedImage').attr('src', imgSrc);
+      $('#imageModal').fadeIn(300).css('display', 'flex');
+    });
+
+    $('#closeModal, #imageModal').on('click', function(e) {
+      if (e.target !== $('#enlargedImage')[0]) {
+        $('#imageModal').fadeOut(300);
+      }
+    });
+
+    // Simulate Response
+    function simulateResponse() {
+      const responses = [
+        "Thank you for your message! I'll get back to you soon.",
+        "Would you like to schedule a visit to see the land?",
+        "Do you have any specific questions about the property?",
+        "The land is located in a very convenient area with easy access to the main road."
+      ];
+
+      const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+      const currentTime = new Date();
+      const timeString = currentTime.getHours() + ':' +
+              (currentTime.getMinutes() < 10 ? '0' : '') +
+              currentTime.getMinutes();
+
+      const $responseElement = $('<div>').addClass('message received');
+      $responseElement.append($('<div>').text(randomResponse));
+      $responseElement.append($('<div>').addClass('message-time').text(timeString));
+
+      $('#chatBody').append($responseElement);
+      scrollToBottom();
+
+      // Randomly send an image response (20% chance)
+      if (Math.random() < 0.2) {
+        setTimeout(function() {
+          sendImageResponse();
+        }, 1500);
+      }
+    }
+
+    // Simulate Image Response
+    function sendImageResponse() {
+      const demoImages = [
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/300"
+      ];
+
+      const randomImage = demoImages[Math.floor(Math.random() * demoImages.length)];
+      const currentTime = new Date();
+      const timeString = currentTime.getHours() + ':' +
+              (currentTime.getMinutes() < 10 ? '0' : '') +
+              currentTime.getMinutes();
+
+      showTypingIndicator();
+
+      setTimeout(function() {
+        hideTypingIndicator();
+
+        const $responseElement = $('<div>').addClass('message received');
+        const $image = $('<img>')
+                .addClass('message-image')
+                .attr('src', randomImage)
+                .attr('alt', 'Property Image');
+
+        $responseElement.append($image);
+        $responseElement.append($('<div>').addClass('message-time').text(timeString));
+
+        $('#chatBody').append($responseElement);
+        scrollToBottom();
+      }, 1500);
+    }
+
+    // Typing Indicator
+    function showTypingIndicator() {
+      $('#typingIndicator').show();
+      scrollToBottom();
+    }
+
+    function hideTypingIndicator() {
+      $('#typingIndicator').hide();
+    }
+
+    // Scroll to Bottom of Chat
+    function scrollToBottom() {
+      $('#chatBody').animate({ scrollTop: $('#chatBody')[0].scrollHeight }, 300);
+    }
+  });
+</script>
+</body>
+</html>

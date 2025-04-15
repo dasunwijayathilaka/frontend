@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/edit-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:50 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Listee | Template</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+    <!-- Feather CSS -->
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.html">
+
+    <!-- Ck Editor -->
+	<link rel="stylesheet" href="assets/css/ckeditor.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+    
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left"> 
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.svg" alt="Logo" width="30" height="30">
+                </a>
+                <a href="index.html" class=" logo-small">
+                    <img src="assets/img/logo-small.svg" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+            <a class="mobile_btn" id="mobile_btn" href="javascript:void(0);">
+                <i class="fas fa-align-left"></i>
+            </a>
+            <div class="header-split">
+                <div class="page-headers">
+                    <div class="search-bar">
+						<span><i class="fe fe-search"></i></span>
+						<input type="text" placeholder="Search" class="form-control">
+					</div>
+                </div>
+                <ul class="nav user-menu">
+                    <!-- Notifications -->
+                    <li class="nav-item">
+                        <a href="../index.html" class="viewsite" ><i class="fe fe-globe me-2"></i>View Site</a>
+                    </li>
+                    <li class="nav-item dropdown has-arrow dropdown-heads flag-nav">
+                        <a class="nav-link" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+                            <img src="assets/img/flags/us1.png" alt="" height="20"> 
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/us.png" class="me-2" alt="" height="16"> English
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/fr.png" class="me-2" alt="" height="16"> French
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/es.png" class="me-2" alt="" height="16"> Spanish
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/img/flags/de.png" class="me-2" alt="" height="16"> German
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item  has-arrow dropdown-heads ">
+                        <a href="javascript:void(0);" class="toggle-switch">
+                            <i class="fe fe-moon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown has-arrow dropdown-heads ">
+                        <a href="javascript:void(0);" data-bs-toggle="dropdown">
+                            <i class="fe fe-bell"></i>
+                        </a>
+                        <div class="dropdown-menu notifications">
+                            <div class="topnav-dropdown-header">
+                                <span class="notification-title">Notifications</span>
+                                <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                            </div>
+                            <div class="noti-content">
+                                <ul class="notification-list">
+                                    <li class="notification-message">
+                                        <a href="notifications.html">
+                                            <div class="media d-flex">
+                                                <span class="avatar avatar-sm flex-shrink-0">
+                                                    <img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-01.jpg">
+                                                </span>
+                                                <div class="media-body flex-grow-1">
+                                                    <p class="noti-details">
+                                                        <span class="noti-title">Matthew Garcia have been subscribed</span>
+                                                    </p>
+                                                    <p class="noti-time">
+                                                        <span class="notification-time">15 Sep 2020 10:20 PM</span>
+                                                    </p>
+                                                   
+                                                </div>
+                                            </div>
+                                        </a>
+										<button type="submit" class="btn btn-accept">Accept</button><span><button type="submit" class="btn btn-decline">Decline</button></span>
+                                    </li>
+                                    <li class="notification-message">
+                                        <a href="notifications.html">
+                                            <div class="media d-flex">
+                                                <span class="avatar avatar-sm flex-shrink-0">
+                                                    <img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-02.jpg">
+                                                </span>
+                                                <div class="media-body flex-grow-1">
+                                                    <p class="noti-details">
+                                                        <span class="noti-title">New User Registered “James Hardin”</span>
+                                                    </p>
+                                                    <p class="noti-time">
+                                                        <span class="notification-time">15 Sep 2020 10:20 PM</span>
+                                                    </p>
+                                                   
+                                                </div>
+                                            </div>
+                                        </a>
+										<button type="submit" class="btn btn-accept">Accept</button><span><button type="submit" class="btn btn-decline">Decline</button></span>
+                                    </li>
+                                    <li class="notification-message">
+                                        <a href="notifications.html">
+                                            <div class="media d-flex">
+                                                <span class="avatar avatar-sm flex-shrink-0">
+                                                    <img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-03.jpg">
+                                                </span>
+                                                <div class="media-body flex-grow-1">
+                                                    <p class="noti-details">
+                                                        <span class="noti-title">New Service added  “Plumbing”</span>
+                                                    </p>
+                                                    <p class="noti-time">
+                                                        <span class="notification-time">15 Sep 2020 10:20 PM</span>
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+										<button type="submit" class="btn btn-decline">Accept</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="topnav-dropdown-footer">
+                                <a href="notifications.html">View all Notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item  has-arrow dropdown-heads ">
+                        <a href="javascript:void(0);" class="win-maximize">
+                            <i class="fe fe-maximize" ></i>
+                        </a>
+                    </li>
+                    
+                    <!-- User Menu -->
+                    <li class="nav-item dropdown">
+                        <a href="javascript:void(0)" class="user-link  nav-link" data-bs-toggle="dropdown">
+                            <span class="user-img">
+                                <img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
+                                <span class="animate-circle"></span>
+                            </span>
+                            <span class="user-content">
+                                <span class="user-name">John Smith</span>
+                                <span class="user-details">Demo User</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu menu-drop-user">
+                            <div class="profilemenu ">
+                                <div class="user-detials">
+                                    <a href="account.html">
+                                        <span class="profile-image">
+                                            <img src="assets/img/user.jpg" alt="img" class="profilesidebar">
+                                        </span>
+                                        <span class="profile-content">
+                                            <span>John Smith</span>
+                                            <span><span class="__cf_email__" data-cfemail="d69cb9beb896b1bbb7bfbaf8b5b9bb">[email&#160;protected]</span></span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="subscription-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="account-settings.html" >Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="localization.html">Settings</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subscription-logout">
+                                    <a href="signin.html">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /User Menu -->
+                </ul>
+            </div>
+            
+        </div>
+        <!-- /Header -->
+        
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <a href="index.html">
+                        <img src="assets/img/logo.svg" class="img-fluid logo" alt="">
+                    </a>
+                    <a href="index.html">
+                        <img src="assets/img/logo-small.svg" class="img-fluid logo-small" alt="">
+                    </a>
+                </div>
+                <div class="siderbar-toggle">
+                    <label class="switch" id="toggle_btn">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title m-0">
+                            <h6>Home</h6>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fe fe-grid"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Listing</h6>
+                        </li>
+                        <li>
+                            <a href="listings.html" class="active"><i class="fe fe-briefcase"></i> 
+                                <span>Listings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categories.html"><i class="fe fe-file-text"></i> 
+                                <span>Categories</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sub-categories.html"><i class="fe fe-clipboard"></i> <span>Sub Categories</span></a>
+                        </li>
+                        <li>
+                            <a href="locations.html"><i class='fe fe-map'></i><span>Locations</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-star"></i> 
+                                <span>Review</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="review-type.html">Review Type</a>
+                                </li>
+                                <li>
+                                    <a href="review.html">Review</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="comments.html"><i class='fe fe-message-square'></i><span>Comments</span></a>
+                        </li>
+                        <li>
+                            <a href="amenities.html"><i class='fe fe-briefcase'></i><span>Amenities</span></a>
+                        </li>
+                        <li>
+                            <a href="product-enquiry.html"><i class='fe fe-box'></i><span>Product Enquiry</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Finance & Accounts</h6>
+                        </li>
+                        <li>
+                            <a href="transactions.html"><i class="fe fe-bar-chart"></i> <span>Transactions</span></a>
+                        </li>
+                        <li>
+                            <a href="payment-gateway.html"><i class="fe fe-file-text"></i> 
+                                <span>Payment Gateway</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tax-rates.html"><i class="fe fe-file-text"></i> 
+                                <span>Tax Rates</span>
+                            </a>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-credit-card"></i> 
+                                <span>Payouts</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="payout-request.html">Payout Requests</a>
+                                </li>
+                                <li>
+                                    <a href="payout-settings.html">Payout Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Others</h6>
+                        </li>
+                        <li>
+                            <a href="chat.html"><i class="fe fe-message-square"></i> <span>Chat</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Content</h6>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-file"></i> 
+                                <span>Pages</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="add-page.html">Add Page</a>
+                                </li>
+                                <li>
+                                    <a href="pages-list.html">Pages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-file-text"></i> 
+                                <span>Blog</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="all-blog.html">All Blog</a>
+                                </li>
+                                <li>
+                                    <a href="add-blog.html">Add Blog</a>
+                                </li>
+                                <li>
+                                    <a href="blogs-categories.html">Categories</a>
+                                </li>
+                                <li>
+                                    <a href="blogs-comments.html">Blog Comments</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-map-pin"></i> 
+                                <span>Location</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="countries.html">Countries</a>
+                                </li>
+                                <li>
+                                    <a href="states.html">States</a>
+                                </li>
+                                <li>
+                                    <a href="cities.html">Cities</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="testimonials.html"><i class="fe fe-star"></i> <span>Testimonials</span></a>
+                        </li>
+                        <li>
+                            <a href="faq.html"><i class="fe fe-help-circle"></i> <span>FAQ</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Membership</h6>
+                        </li>
+                        <li>
+                            <a href="membership.html"><i class="fe fe-user"></i> <span>Membership</span></a>
+                        </li>
+                        <li>
+                            <a href="membership-transactions.html"><i class="fe fe-user-plus"></i> <span>Transactions</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Reports</h6>
+                        </li>
+                        <li>
+                            <a href="admin-earnings.html"><i class="fe fe-user"></i> 
+                                <span>Admin Earnings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="provider-earnings.html"><i class="fe fe-dollar-sign"></i> 
+                                <span>Provider Earnings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="membership-transactions.html"><i class="fe fe-tv"></i> 
+                                <span>Membership Transaction</span>
+                            </a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>User Management</h6>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><i class="fe fe-user"></i> 
+                                <span> Users</span>
+                                <span class="menu-arrow"><i class="fe fe-chevron-right"></i></span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="user-list.html">New User</a>
+                                </li>
+                                <li>
+                                    <a href="user-customers.html">Customers</a>
+                                </li>
+                                <li>
+                                    <a href="user-providers.html">Providers </a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="roles-permissions.html"><i class="fe fe-file-text"></i> <span>Roles & Permissions</span></a>
+                        </li>
+                        <li>
+                            <a href="delete-account-requests.html"><i class="fe fe-trash-2"></i> <span>Delete Account Requests</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Management</h6>
+                        </li>
+                        <li>
+                            <a href="cachesystem.html"><i class="fe fe-user"></i> 
+                                <span>Cache System</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="email-templates.html"><i class="fe fe-mail"></i> <span>Email Templates</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Support</h6>
+                        </li>
+                        <li>
+                            <a href="contact-messages.html"><i class="fe fe-message-square"></i> <span>Contact Messages</span></a>
+                        </li>
+                        <li>
+                            <a href="abuse-reports.html"><i class="fe fe-file-text"></i> <span>Abuse Reports</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <h6>Settings</h6>
+                        </li>
+                        <li>
+                            <a href="localization.html" ><i class="fe fe-settings"></i> <span>Settings</span></a>
+                        </li>
+                        <li>
+                            <a href="signin.html"><i class="fe fe-log-out"></i> <span>Logout</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Sidebar -->
+        
+        <div class="page-wrapper">
+            <div class="content">
+				<div class="content-page-header content-page-headersplit">
+                    <h5>Edit Listings</h5>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 m-auto">
+						<ul id="progressbar">
+							<li class="active">
+								<div class="multi-step-info">
+									<h6>Information</h6>
+									<p>Lorem ipsum dolor sit</p>
+								</div>
+								<div class="multi-step-icon">
+									<span><i class="fe fe-clipboard"></i></span>
+								</div>
+							</li>
+							<li>
+								<div class="multi-step-info">
+									<h6>Booking</h6>
+									<p>Lorem ipsum dolor sit</p>
+								</div>
+								<div class="multi-step-icon">
+									<span><i class="fe fe-smartphone"></i></span>
+								</div>
+							</li>
+							<li>
+								<div class="multi-step-info">
+									<h6>Location</h6>
+									<p>Lorem ipsum dolor sit</p>
+								</div>
+								<div class="multi-step-icon">
+									<span><i class="fe fe-map-pin"></i></span>
+								</div>
+							</li>
+							<li>
+								<div class="multi-step-info">
+									<h6>Gallery</h6>
+									<p>Lorem ipsum dolor sit</p>
+								</div>
+								<div class="multi-step-icon">
+									<span><i class="fe fe-image"></i></span>
+								</div>
+							</li>
+							<li>
+								<div class="multi-step-info">
+									<h6>Availability</h6>
+									<p>Lorem ipsum dolor sit</p>
+								</div>
+								<div class="multi-step-icon">
+									<span><i class="fe fe-calendar"></i></span>
+								</div>
+							</li>
+						</ul>
+						
+						<!-- Service Information -->
+						<fieldset id="first-field">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="sub-title">
+										<h6>Listing Name</h6>
+									</div> 				
+									<div class="form-set">
+										<input type="text" class="form-control" value="Computer Repair" placeholder="Listing Name">
+									</div>
+								</div> 	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>Category</label>
+										<select class="select">
+                                            <option>Select Category</option>
+                                            <option>Category 1</option>
+                                            <option>Category 2</option>
+                                            <option>Category 3</option>
+                                        </select>
+									</div>
+								</div> 	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label> Select Sub Category</label>
+										<select class="select">
+                                            <option>Select Sub Category</option>
+                                            <option>Category 1</option>
+                                            <option>Category 2</option>
+                                            <option>Category 3</option>
+                                        </select>
+									</div>
+								</div>	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>Price</label> <span><i class="fe fe-alert-circle"></i> Set 0 for free</span>
+										<input type="text" class="form-control" value="50" placeholder="Enter Price">
+										
+									</div>
+								</div>	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>Duration <span><i class="fe fe-alert-circle"></i> Set 0 for free</span></label>
+										<div class="form-duration">
+											<input type="text" class="form-control" value="10 mins" placeholder="Enter Duration">
+											<span class="mins">Mins</span>
+										</div>
+									</div>
+								</div>		
+								<div class="col-md-12">
+									<div class="form-set">
+										<label>Base</label>
+										 <div id="editor"></div>
+									</div>
+								</div>	
+							</div> 
+							<div class="row">									
+								<div class="col-sm-6">
+									<div class="sub-title">
+										<h6>Additional Service</h6>
+									</div> 										
+								</div> 										
+							</div> 	
+							<div class="addservice-info">
+								<div class="row service-cont">
+									<div class="col-md-4">
+										<div class="form-set">
+											<label>Name</label>
+											<input type="text" class="form-control" value="Car Repair" placeholder="Enter name">
+										</div>
+									</div> 	
+									<div class="col-md-4">
+										<div class="form-set">
+											<label>Place</label>
+											<input type="text" class="form-control" value="America" placeholder="Enter Services Place">
+										</div>
+									</div> 	
+									<div class="col-md-4">
+										<div class="form-set">
+											<label>Duration</label>
+											<input type="text" class="form-control" value="1 hour" placeholder="Enter Service Duration">
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="javascript:void(0);" class="link-sets add-extra"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Additional Service</a>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="field-btns">
+										<button class="btn btn-submit next_btn" type="button">Next <i class="fe fe-arrow-right ms-1"></i></button>
+									</div>  
+								</div>   
+							</div>
+						</fieldset>
+						<!-- /Service Information -->
+						
+						<!-- Booking -->
+						<fieldset>
+							<div class="row">									
+								<div class="col-md-12">
+									<div class="sub-title">
+										<h6>Is Featured ?</h6>
+									</div> 										
+								</div> 		
+								<div class="col-md-12">
+									<div class="form-set">
+										
+										<label class="custom_radio d-inline-block me-3">
+											<input type="radio" name="time" checked="" id="time-slot">
+											<span class="checkmark"></span> Time Picker
+										</label>
+										<label class="custom_radio d-inline-block me-3">
+											<input type="radio" name="time" id="time-picker">
+											<span class="checkmark"></span> Time Slot
+										</label>
+									</div>
+								</div> 	
+								<div class="col-md-12">
+								
+									<!-- Timeslot -->
+									<div class="timeslot-sec">
+										<!-- Schedule Nav -->
+										<label>Configure Time Slots</label>
+										<div class="schedule-nav">
+											<ul class="nav">
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#all_days">All Days</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link active" data-bs-toggle="tab" href="#slot_monday">Monday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slot_tuesday">Tuesday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slot_wednesday">Wednesday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slot_thursday">Thursday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slot_friday">Friday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slot_saturday">Saturday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slot_sunday">Sunday</a>
+												</li>
+											</ul>
+										</div>
+										<!-- /Schedule Nav -->
+										
+										<div class="tab-content pt-0">
+											<div class="tab-pane active" id="all_days">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>	
+											<div class="tab-pane fade" id="slot_monday">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>	
+											<div class="tab-pane fade" id="slot_tuesday">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>	
+											<div class="tab-pane fade" id="slot_wednesday">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>		
+											<div class="tab-pane fade" id="slot_thursday">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>		
+											<div class="tab-pane fade" id="slot_friday">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>			
+											<div class="tab-pane fade" id="slot_saturday">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>			
+											<div class="tab-pane fade" id="slot_sunday">
+												<div class="hours-info">
+													<div class="row hours-cont">
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+														<div class="col-md-4">
+															<div class="form-set">
+																<label>Slots</label>
+																<input type="text" class="form-control" placeholder="Enter Slot">
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hours"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>	
+										</div>
+									</div>
+									<!-- Timeslot -->
+			
+									<!-- Timepicker -->
+									<div class="timepicker-sec">
+										<!-- Schedule Nav -->
+										<div class="schedule-nav">
+											<ul class="nav">
+												<li class="nav-item">
+													<a class="nav-link active" data-bs-toggle="tab" href="#all_day">All Days</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slots_monday">Monday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slots_tuesday">Tuesday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slots_wednesday">Wednesday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slots_thursday">Thursday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slots_friday">Friday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slots_saturday">Saturday</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#slots_sunday">Sunday</a>
+												</li>
+											</ul>
+										</div>
+										<!-- /Schedule Nav -->
+										
+										<div class="tab-content pt-0">
+											<div class="tab-pane active" id="all_day">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+											</div>	
+											<div class="tab-pane fade" id="slots_monday">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>	
+											<div class="tab-pane fade" id="slots_tuesday">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>	
+											<div class="tab-pane fade" id="slots_wednesday">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>	
+											<div class="tab-pane fade" id="slots_thursday">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>		
+											<div class="tab-pane fade" id="slots_friday">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>	
+											<div class="tab-pane fade" id="slots_saturday">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>		
+											<div class="tab-pane fade" id="slots_sunday">
+												<div class="hrs-info">
+													<div class="row hrs-cont">
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>From</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div> 	
+														<div class="col-md-6">
+															<div class="form-set">
+																<label>To</label>
+																<div class='form-icon'>
+																	<input type='text' class="form-control timepicker"  placeholder="Select Time">
+																	<span class="cus-icon"><i class="fe fe-clock"></i></span>
+																</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<a href="javascript:void(0);" class="link-sets add-hrs"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>	
+											</div>		
+										</div>
+									</div>
+									<!-- /Timepicker -->
+									
+								</div>	
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="field-btns">
+										<button class="btn btn-submit next_btn" type="button">Next <i class="fe fe-arrow-right ms-1"></i></button>
+									</div>  
+								</div>   
+							</div>
+						</fieldset>
+						<!-- /Booking -->
+						
+						<!-- Location -->
+						<fieldset>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="sub-title">
+										<h6>Additional Service</h6>
+									</div> 					
+									<div class="form-set">
+										<label>Location</label>
+										<div class="map-grid">
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6509170.989457427!2d-123.80081967108484!3d37.192957227641294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C%20USA!5e0!3m2!1sen!2sin!4v1669181581381!5m2!1sen!2sin" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact-map"></iframe>
+										</div>	
+									</div>
+								</div> 	
+								<div class="col-md-12">
+									<div class="form-set">
+										<label>Address</label>
+										<input type="text" class="form-control" placeholder="Enter Your Address">
+									</div>
+								</div> 	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>Country</label>
+										<select class="select">
+                                            <option>Select Country</option>
+                                            <option>Country 1</option>
+                                            <option>Country 2</option>
+                                            <option>Country 3</option>
+                                        </select>
+									</div>
+								</div>	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>State</label>
+										<select class="select">
+                                            <option>Select State</option>
+                                            <option>State 1</option>
+                                            <option>State 2</option>
+                                            <option>State 3</option>
+                                        </select>
+									</div>
+								</div>	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>City</label>
+										<input type="text" class="form-control" placeholder="Enter Your City">
+									</div>
+								</div>	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>Pincode</label>
+										<input type="text" class="form-control" placeholder="Enter Your Pincode">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-set">
+										<label>Google Maps Place ID</label>
+										<input type="text" class="form-control" placeholder="Enter Maps Place ID">
+									</div>
+								</div>	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>Latitude</label>
+										<input type="text" class="form-control" placeholder="Enter Latitude Number">
+									</div>
+								</div>	
+								<div class="col-md-6">
+									<div class="form-set">
+										<label>Longitude</label>
+										<input type="text" class="form-control" placeholder="Enter Longitude Number">
+									</div>
+								</div>	
+							</div> 
+							<div class="row">
+								<div class="col-md-12">
+									<div class="field-btns">
+										<button class="btn btn-submit next_btn" type="button">Next <i class="fe fe-arrow-right ms-1"></i></button>
+									</div>  
+								</div>   
+							</div>
+						</fieldset>
+						<!-- /Location -->
+						
+						<!-- Gallery -->
+						<fieldset>
+							<div class="sub-title">
+								<h6>Gallery</h6>
+							</div> 					
+							<div class="form-uploads mb-4">
+								<div class="form-uploads-path">
+									<img src="assets/img/icons/upload.svg" alt="img">
+									<div class="file-browse">
+										<h6>Drag & drop image or </h6>
+										<div class="file-browse-path">
+											<input type="file">
+											<a href="javascript:void(0);"> Browse</a>
+										</div>
+									</div>
+									<h5>Supported formates: JPEG, PNG</h5>
+								</div>
+							</div>
+							<div class="file-preview">											
+								<ul>
+									<li>
+										<h6>Select Default Image:</h6>
+									</li>
+									<li>
+										<label class="custom_check">
+											<input type="checkbox" name="rememberme" class="rememberme" checked>
+											<span class="checkmark"></span>
+										</label>
+										<img src="assets/img/services/service-01.png" alt=""> 
+									</li>
+									<li>
+										<label class="custom_check">
+											<input type="checkbox" name="rememberme" class="rememberme">
+											<span class="checkmark"></span>
+										</label>
+										<img src="assets/img/services/service-02.png" alt=""> 
+									</li>
+									<li>
+										<label class="custom_check">
+											<input type="checkbox" name="rememberme" class="rememberme">
+											<span class="checkmark"></span>
+										</label>
+										<img src="assets/img/services/service-03.png" alt=""> 
+									</li>
+									<li>
+										<label class="custom_check">
+											<input type="checkbox" name="rememberme" class="rememberme">
+											<span class="checkmark"></span>
+										</label>
+										<img src="assets/img/services/service-04.png" alt=""> 
+									</li>
+								</ul>
+							</div>
+							<div class="form-set">
+								<label>Embed Video URL</label>
+								<input type="text" class="form-control" placeholder="Ex: https//youtube.com">
+							</div>
+							<div class="field-btns">
+								<button class="btn btn-submit next_btn" type="button">Next <i class="fe fe-arrow-right ms-1"></i></button>
+							</div> 
+						</fieldset>
+						<!-- /Gallery -->							
+						
+						<!-- Availability -->
+						<fieldset>
+									
+							<div class="availability-sec">
+								<div class="row">
+								
+									<div class="col-sm-6">
+										<h6>All Days</h6>
+									</div>
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_2" class="check" checked>
+											<label for="status_2" class="checktoggle">checkbox</label>
+										</div>
+									</div>										
+									<div class="col-md-12">
+										<div class="day-info">
+											<div class="row day-cont">
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>From</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>To</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>	
+											</div>	
+										</div>
+										<div class="form-set">
+											<a href="javascript:void(0);" class="link-sets add-day"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+										</div>
+									</div>		
+									<div class="col-sm-6">
+										<h6>Monday</h6>
+									</div>
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_3" class="check" checked>
+											<label for="status_3" class="checktoggle">checkbox</label>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="day-info">
+											<div class="row day-cont">
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>From</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>To</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>	
+											</div>	
+										</div>
+										<div class="form-set">
+											<a href="javascript:void(0);" class="link-sets add-day"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<h6>Tuesday</h6>
+									</div>
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_21" class="check" checked>
+											<label for="status_21" class="checktoggle">checkbox</label>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="day-info">
+											<div class="row day-cont">
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>From</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>To</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>	
+											</div>	
+										</div>
+										<div class="form-set">
+											<a href="javascript:void(0);" class="link-sets add-day"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<h6>Wednesday</h6>
+									</div>
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_4" class="check" checked>
+											<label for="status_4" class="checktoggle">checkbox</label>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="day-info">
+											<div class="row day-cont">
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>From</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>To</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>	
+											</div>	
+										</div>
+										<div class="form-set">
+											<a href="javascript:void(0);" class="link-sets add-day"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+										</div>
+									</div>	
+									<div class="col-sm-6">
+										<h6>Thursday</h6>
+									</div>
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_5" class="check" checked>
+											<label for="status_5" class="checktoggle">checkbox</label>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="day-info">
+											<div class="row day-cont">
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>From</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>To</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>	
+											</div>	
+										</div>
+										<div class="form-set">
+											<a href="javascript:void(0);" class="link-sets add-day"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+										</div>
+									</div>			
+									<div class="col-sm-6">
+										<h6>Friday</h6>
+									</div>
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_6" class="check" checked>
+											<label for="status_6" class="checktoggle">checkbox</label>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="day-info">
+											<div class="row day-cont">
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>From</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>To</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>	
+											</div>	
+										</div>
+										<div class="form-set">
+											<a href="javascript:void(0);" class="link-sets add-day"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+										</div>
+									</div>			
+									<div class="col-sm-6">
+										<h6>Saturday</h6>
+									</div>
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_7" class="check" checked>
+											<label for="status_7" class="checktoggle">checkbox</label>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="day-info">
+											<div class="row day-cont">
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>From</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-set">
+														<label>To</label>
+														<div class='form-icon'>
+															<input type='text' class="form-control timepicker"  placeholder="Select Time">
+															<span class="cus-icon"><i class="feather-clock"></i></span>
+														</div>
+													</div>
+												</div>	
+											</div>	
+										</div>
+										<div class="form-set">
+											<a href="javascript:void(0);" class="link-sets add-day"><i class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Hours</a>
+										</div>
+									</div>			
+									<div class="col-sm-6">
+										<h6>Sunday</h6>
+									</div>	
+									<div class="col-sm-6">
+										<div class="status-toggle d-flex justify-content-sm-end align-items-center">
+											<input type="checkbox" id="status_8" class="check">
+											<label for="status_8" class="checktoggle">checkbox</label>
+										</div>
+									</div>	
+									
+								</div>					
+							</div>
+							<div class="field-btns">
+								<a href="listings.html" class="btn btn-primary next_btn">Save changes<i class="fe fe-arrow-right ms-1"></i></a>
+							</div> 
+						</fieldset>
+						<!-- /Availability -->
+						
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- jQuery -->
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.7.1.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+    
+    <!-- Select 2 JS-->
+    <script src="assets/js/select2.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+    <!-- Feather Icon JS -->
+    <script src="assets/js/feather.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+    <!-- Datatable JS -->
+    <script src="assets/js/jquery.dataTables.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+    <!-- Ck Editor JS -->
+	<script src="assets/js/ckeditor.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+
+
+    <!-- Datetimepicker JS -->
+    <script src="assets/js/moment.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/admin.js" type="4cb441ac421fc68e3c43ad23-text/javascript"></script>
+
+<script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4cb441ac421fc68e3c43ad23-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9233fa62db903e44","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"3ca157e612a14eccbb30cf6db6691c29","b":1}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from listee.dreamstechnologies.com/html/admin/edit-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:54:50 GMT -->
+</html>
