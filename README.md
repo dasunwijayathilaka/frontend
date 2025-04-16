@@ -20,10 +20,8 @@ This is a full-stack web-based **Classified Ads Platform** that allows users to 
 > All screenshots are located in the `screenshots/` folder.
 
 ### 🏠 Home Page  
-![Home Page](screenshots/homepage.png)
-
-### 👤 User Dashboard  
-![User Dashboard](screenshots/user_dashboard.png)
+![Home Page](![Screenshot 2025-04-16 214425](https://github.com/user-attachments/assets/c02d5a1d-d3cf-476e-84b2-6cb0f2023292)
+)
 
 ### 📝 Post Ad Form  
 ![Post Ad](screenshots/post_ad_form.png)
@@ -31,8 +29,7 @@ This is a full-stack web-based **Classified Ads Platform** that allows users to 
 ### 🧑‍💼 Admin Panel  
 ![Admin Panel](screenshots/admin_panel.png)
 
-### 💬 Chat Interface  
-![Chat](screenshots/chat_interface.png)
+
 
 ---
 
