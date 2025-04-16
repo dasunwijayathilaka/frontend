@@ -24,10 +24,22 @@ This is a full-stack web-based **Classified Ads Platform** that allows users to 
 )
 
 ### 📝 Post Ad Form  
-![Post Ad](screenshots/post_ad_form.png)
+![Post Ad](![Screenshot 2025-04-16 235148](https://github.com/user-attachments/assets/8b2066ae-fff1-47f7-b1d3-90e9c7f813df)
+)
 
 ### 🧑‍💼 Admin Panel  
-![Admin Panel](screenshots/admin_panel.png)
+![Admin Panel](![Screenshot 2025-04-16 235331](https://github.com/user-attachments/assets/8612e9ff-9277-49ef-85d7-87468d98621a)
+)
+
+
+---
+
+
+
+## 📸 Screenvedio
+
+Uploading ui-explane.mp4…
+
 
 
 
