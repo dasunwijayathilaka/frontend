@@ -2,6 +2,272 @@
 /***** custom values *****/
 /***** Grid Values *****/
 /** Extends **/
+
+:root {
+  /* Gold Color Palette */
+  --primary-gold: #D4AF37;       /* Rich gold */
+  --secondary-gold: #FFDF00;     /* Golden yellow */
+  --light-gold: #FFF1C1;         /* Very light gold */
+  --dark-gold: #996515;          /* Dark gold */
+
+  /* Pink Background Colors */
+  --background-light-pink: #1096ef;  /* Lavender blush - light pink */
+  --background-pink: #1198f3;        /* Slightly darker light pink */
+  --background-pink-accent: #1198f3; /* Medium light pink accent */
+
+  /* Text Colors */
+  --text-dark: #333333;          /* Dark text */
+  --text-gold: #8A6E2F;          /* Gold-tinted text */
+}
+
+/* Base styling */
+body {
+  background-color: var(--background-gold);
+  color: var(--text-dark);
+}
+
+/* Header styling */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+}
+
+.header-login, .header-reg {
+  color: var(--dark-gold) !important;
+}
+
+.header-login:hover, .header-reg:hover {
+  color: var(--primary-gold) !important;
+}
+
+.add-listing {
+  background-color: var(--primary-gold) !important;
+  border-color: var(--primary-gold) !important;
+}
+
+.add-listing:hover {
+  background-color: var(--dark-gold) !important;
+  border-color: var(--dark-gold) !important;
+}
+
+/* Navigation */
+.main-nav > li > a {
+  color: var(--text-dark);
+}
+
+.main-nav > li > a:hover,
+.main-nav > li.active > a {
+  color: var(--primary-gold) !important;
+}
+
+.has-submenu ul li a:hover {
+  color: var(--primary-gold);
+}
+
+/* Banner Section */
+.banner-section {
+  background-color: white;
+}
+
+.banner-section h1 span {
+  color: var(--primary-gold);
+}
+
+.explore-text span {
+  background-color: var(--light-gold);
+  color: var(--dark-gold);
+}
+
+.btn-primary,
+.search-btn .btn-primary {
+  background-color: var(--primary-gold) !important;
+  border-color: var(--primary-gold) !important;
+}
+
+.btn-primary:hover,
+.search-btn .btn-primary:hover {
+  background-color: var(--dark-gold) !important;
+  border-color: var(--dark-gold) !important;
+}
+
+/* Form elements */
+.form-control:focus {
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.select2-container--default .select2-selection--single:focus {
+  border-color: var(--primary-gold);
+}
+
+/* Category section */
+.section-heading h2 span.title-left,
+.section-heading h2 span.title-right {
+  color: var(--primary-gold);
+}
+
+.btn-view {
+  background-color: transparent !important;
+  border: 1px solid var(--primary-gold) !important;
+  color: var(--primary-gold) !important;
+}
+
+.btn-view:hover {
+  background-color: var(--primary-gold) !important;
+  color: white !important;
+}
+
+.category-card:hover {
+  border-color: var(--primary-gold);
+}
+
+.category-content h6 a:hover {
+  color: var(--primary-gold);
+}
+
+/* Latest ads section */
+.feature-img .featured-border {
+  border: 2px solid var(--primary-gold);
+}
+
+.feature-img .featured-star {
+  background: var(--primary-gold);
+}
+
+.featur-links a:hover {
+  color: var(--primary-gold);
+}
+
+.list-content h3 a:hover {
+  color: var(--primary-gold);
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: white;
+}
+
+.cta-content h3 span {
+  color: var(--primary-gold);
+}
+
+.btn-primary.postad-btn {
+  background-color: var(--primary-gold) !important;
+  border-color: var(--primary-gold) !important;
+}
+
+.btn-primary.postad-btn:hover {
+  background-color: var(--dark-gold) !important;
+  border-color: var(--dark-gold) !important;
+}
+
+.browse-btn {
+  border: 1px solid var(--primary-gold) !important;
+  color: var(--primary-gold) !important;
+}
+
+.browse-btn:hover {
+  background-color: var(--primary-gold) !important;
+  color: white !important;
+}
+
+/* Footer */
+.footer {
+  background-color: #222222;
+}
+
+.stay-tuned {
+  background-color: var(--primary-gold);
+}
+
+.stay-tuned form button {
+  background-color: #222222 !important;
+  border-color: #222222 !important;
+}
+
+.footer-title {
+  color: var(--primary-gold);
+}
+
+.footer-widget p {
+  color: #e0e0e0;
+}
+
+.footer-widget ul li a {
+  color: #e0e0e0;
+}
+
+.footer-widget ul li a:hover {
+  color: var(--light-gold);
+}
+
+.social-icon ul li a {
+  background-color: rgba(212, 175, 55, 0.2);
+  color: var(--light-gold);
+}
+
+.social-icon ul li a:hover {
+  background-color: var(--primary-gold);
+  color: white;
+}
+
+.visitors-value {
+  color: var(--primary-gold);
+}
+
+/* Back to top button */
+.progress-wrap {
+  background-color: var(--primary-gold);
+}
+
+.progress-wrap::after {
+  color: white;
+}
+
+.progress-wrap svg.progress-circle path {
+  stroke: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700;800;900&amp;family=Sassy+Frass&amp;display=swap");
 .css-equal-content, .css-equal-heights {
   display: flex;
@@ -11,7 +277,7 @@
 }
 
 .css-equal-content {
-  color: red;
+  color: #f8c032;
   float: left;
 }
 
